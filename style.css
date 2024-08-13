@@ -23,6 +23,24 @@ body{
     display: flex;
     column-gap: 7rem;
 }
+.container.start .user_result{
+    transform-origin: left;
+    animation: userShake 0.7s ease infinite;
+}
+@keyframes userShake {
+    50%{
+        transform: rotate(10deg);
+    }
+}
+.container.start .cpu_result{
+    transform-origin: right;
+    animation: cpuShake 0.7s ease infinite;
+}
+@keyframes cpuShake {
+    50%{
+        transform: rotate(-10deg);
+    }
+}
 .result_images img{
     width: 100px;
 }
@@ -46,6 +64,9 @@ body{
     align-items: center;
     margin-top: 2.5rem;
     justify-content: space-between;
+}
+.container.start .option_images{
+    pointer-events: none;
 }
 .option_image{
     display: flex;
