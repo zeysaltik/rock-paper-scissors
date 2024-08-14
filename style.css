@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap");
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: "Orbitron", sans-serif;
 }
 
 body {
@@ -12,14 +12,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f6f7fb;
+    background: linear-gradient(135deg, #2b0f54, #0d0018);
+    color: #fff;
 }
 
 .container {
     padding: 2rem 7rem;
     border-radius: 14px;
-    background: #fff;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    background: #1a0033;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    border: 2px solid #6a0dad;
 }
 
 .result_field {
@@ -55,6 +57,7 @@ body {
 
 .result_images img {
     width: 100px;
+    filter: drop-shadow(0 0 10px #6a0dad);
 }
 
 .user_result img {
@@ -68,12 +71,14 @@ body {
 .result {
     text-align: center;
     font-size: 2rem;
-    color: black;
-    margin-top: 1.5 rem;
+    color: #6a0dad;
+    margin-top: 1.5rem;
+    text-shadow: 0 0 2px #ff00ff;
 }
 
 .option_image img {
     width: 50px;
+    filter: drop-shadow(0 0 5px #6a0dad);
 }
 
 .option_images {
@@ -109,7 +114,7 @@ body {
 }
 
 .option_image p {
-    color: black;
+    color: #6a0dad;
     font-size: 1.235rem;
     margin-top: 1rem;
     pointer-events: none;
@@ -118,13 +123,20 @@ body {
 .scores-div {
     padding: 2rem 3rem;
     border-radius: 20px;
-    background-color: bisque;
-    box-shadow: 0 2px 0 3px rgba(0, 0, 0, 0.1);
+    background-color: #300032;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    border: 2px solid #6a0dad;
 }
 
 ul {
     height: 8vh;
     align-items: center;
     justify-content: center;
-    background-color: bisque;
+    background-color: transparent;
+}
+
+.scores p {
+    color: #fff;
+    font-size: 1.5rem;
+    text-shadow: 0 0 10px #ff00ff;
 }
