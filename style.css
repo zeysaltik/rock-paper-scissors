@@ -6,49 +6,65 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-body{
+
+body {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #f6f7fb;
 }
-.container{
+
+.container {
     padding: 2rem 7rem;
     border-radius: 14px;
     background: #fff;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
-.result_images{
+
+.result_field {
+    margin-top: 2rem;
+}
+
+.result_images {
     display: flex;
     column-gap: 7rem;
 }
-.container.start .user_result{
+
+.container.start .user_result {
     transform-origin: left;
     animation: userShake 0.7s ease infinite;
 }
+
 @keyframes userShake {
-    50%{
+    50% {
         transform: rotate(10deg);
     }
 }
-.container.start .cpu_result{
+
+.container.start .cpu_result {
     transform-origin: right;
     animation: cpuShake 0.7s ease infinite;
 }
+
 @keyframes cpuShake {
-    50%{
+    50% {
         transform: rotate(-10deg);
     }
 }
-.result_images img{
+
+.result_images img {
     width: 100px;
 }
-.user_result img{
+
+.user_result img {
     transform: rotate(90deg);
-}.cpu_result img{
+}
+
+.cpu_result img {
     transform: rotate(-90deg) rotateY(180deg);
 }
+
 .result {
     text-align: center;
     font-size: 2rem;
@@ -56,19 +72,22 @@ body{
     margin-top: 1.5 rem;
 }
 
-.option_image img{
+.option_image img {
     width: 50px;
 }
-.option_images{
+
+.option_images {
     display: flex;
     align-items: center;
     margin-top: 2.5rem;
     justify-content: space-between;
 }
-.container.start .option_images{
+
+.container.start .option_images {
     pointer-events: none;
 }
-.option_image{
+
+.option_image {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,18 +95,36 @@ body{
     cursor: pointer;
     transition: opacity 0.3s ease;
 }
-.option_image:hover{
+
+.option_image:hover {
     opacity: 1;
 }
+
 .option_image.active {
     opacity: 1;
 }
-.option_image img{
+
+.option_image img {
     pointer-events: none;
 }
-.option_image p{
+
+.option_image p {
     color: black;
     font-size: 1.235rem;
     margin-top: 1rem;
     pointer-events: none;
+}
+
+.scores-div {
+    padding: 2rem 3rem;
+    border-radius: 20px;
+    background-color: bisque;
+    box-shadow: 0 2px 0 3px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    height: 8vh;
+    align-items: center;
+    justify-content: center;
+    background-color: bisque;
 }

@@ -1,10 +1,15 @@
+let userScore = 0
+let cpuScore = 0
+
+const user_scoreSpan = document.querySelector(".user_score")
+const cpu_scoreSpan = document.querySelector(".cpu_score")
 const gameContainer = document.querySelector(".container"),
     userResult = document.querySelector(".user_result img"),
     cpuResult = document.querySelector(".cpu_result img"),
     result = document.querySelector(".result"),
     optionImages = document.querySelectorAll(".option_image");
 
-// console.log(optionImages)
+// console.log(optionImages)    
 optionImages.forEach((image, index) => {
     image.addEventListener(("click"), (e) => {
         image.classList.add("active")
@@ -14,7 +19,7 @@ optionImages.forEach((image, index) => {
             index !== index2 && image2.classList.remove("active");
         })
         gameContainer.classList.add("start")
-        
+
         let time = setTimeout(() => {
             gameContainer.classList.remove("start")
             let imageSrc = e.target.querySelector("img").src;
@@ -37,7 +42,19 @@ optionImages.forEach((image, index) => {
             }
             let outComeValue = outcomes[userValue + cpuValue]
             result.textContent = userValue === cpuValue ? "Match Draw" : `${outComeValue} Won!!`
+            if (result.textContent === "Cpu Won!!") {
+                function cpuWin() {
+                    cpuScore++
+                    cpu_scoreSpan.textContent = cpuScore
+                }
+                cpuWin()
+            } else if (result.textContent === "User Won!!") {
+                function userWin() {
+                    userScore++
+                    user_scoreSpan.textContent = userScore
+                }
+                userWin()
+            }
         }, 2500)
-
     })
-})
+})    
